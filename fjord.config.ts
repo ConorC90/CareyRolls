@@ -1,12 +1,12 @@
 const fjord: FjordProps = {
-  site_name: "Fjord", // site name: used in the header and footer
-  site_domain: "https://fjord.dev", // site domain: used in the sitemap
+  site_name: "Carey Rolls", // site name: used in the header and footer
+  site_domain: "https://careyrolls.com", // site domain: used in the sitemap
   site_title:
-    "Fjord | Opinionated Next JS and Wordpress Starter by Alpine Codex",
+    "Carey Rolls | Biketouring travel blog",
   site_description:
     "Fjord is an opinionated Next JS and Wordpress starter. It's built to be a solid foundation for your next project.",
-  keywords: ["Next.js", "React", "JavaScript"],
-  authors: [{ name: "9d8", url: "https://9d8.dev" }],
+  keywords: ["Bikepacking", "Bike Touring", "Camping Recipes"],
+  authors: [{ name: "Conor Carey", url: "https://9d8.dev" }],
   posts_per_page: 9,
   wordpress_url: "https://windpress.wpenginepowered.com",
   google_analytics_id: "G-7VM8KZENP7",
@@ -22,6 +22,7 @@ const fjord: FjordProps = {
       blog: "/posts", // default is `/posts`
       about: "/about", // you can remove this if you don't want an about page
       contact: "/contact", // you can remove this if you don't want a contact page
+      recipes: "/recipes"
     },
     content: {
       authors: "/posts/authors", // default is `/posts/authors`
@@ -62,6 +63,11 @@ const fjord: FjordProps = {
         title: "Authors",
         href: "/posts/authors",
         description: "A list of all the authors on this site.",
+      },
+      {
+        title: "Recipes",
+        href: "/recipes",
+        description: "A list of all the recipes on this site.",
       },
     ],
   },

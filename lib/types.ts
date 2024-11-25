@@ -120,6 +120,7 @@ type FjordProps = {
       blog: string;
       about?: string;
       contact?: string;
+      recipes?: string;
     };
     content: {
       authors: string;

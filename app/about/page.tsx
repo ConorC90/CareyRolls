@@ -1,5 +1,4 @@
 import About from "@/components/sections/about";
-import CTA from "@/components/sections/cta";
 import FAQ from "@/components/sections/faq";
 import SecondaryHero from "@/components/sections/secondary-hero";
 import * as Craft from "@/components/craft/layout";
@@ -20,7 +19,6 @@ export default function Page() {
       </SecondaryHero>
       <About />
       <FAQ />
-      <CTA />
     </Craft.Main>
   );
 }

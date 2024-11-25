@@ -17,7 +17,7 @@ const About = () => {
               placeholder="blur"
             />
           </div>
-          <h3 className="text-3xl">Fjord is a headless WordPress template</h3>
+          <h3 className="text-3xl">Hello This is sample text</h3>
           <h4 className="text-xl opacity-70">
             This is an example about section. What do you want to say about your
             company?

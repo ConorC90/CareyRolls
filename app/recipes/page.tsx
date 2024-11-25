@@ -18,7 +18,9 @@ import { fetchTags, fetchPosts } from "@/lib/data";
 
 // Meta Data
 export const metadata: Metadata = {
-  title: `Blog | ${fjord.site_name}`,
+  title: {
+    absolute: `Recipes | ${fjord.site_name}`,
+  },
   description: `Read the ${fjord.site_name} blog. ${fjord.site_description}`,
 };
 
@@ -38,9 +40,8 @@ export default async function Posts({
 
   return (
     <Craft.Main>
-      <SecondaryHero title="All Posts" subtitle={`${fjord.site_name} blog`}>
-        All posts from {fjord.site_name}. These are all the posts from your
-        WordPress.
+      <SecondaryHero title="All Recipes" subtitle={`${fjord.site_name} blog`}>
+        All recipes
       </SecondaryHero>
       <Craft.Section>
         <Craft.Container>

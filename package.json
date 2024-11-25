@@ -48,6 +48,7 @@
     "date-fns": "^3.2.0",
     "embla-carousel-react": "^8.0.0-rc19",
     "firebase": "^11.0.2",
+    "firebase-tools": "^13.27.0",
     "lucide-react": "^0.308.0",
     "next": "^14.0.4",
     "next-mdx-remote": "^4.4.1",

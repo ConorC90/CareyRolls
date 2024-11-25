@@ -1,6 +1,6 @@
 import Link from "next/link";
-import React, { ReactNode } from "react";
-import { ArrowTopRightIcon, CalendarIcon } from "@radix-ui/react-icons";
+import React from "react";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { Badge } from "../ui/badge";
 
 const PostTag = ({ name, id }: TagProps) => (
