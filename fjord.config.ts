@@ -1,4 +1,4 @@
-const fjord: FjordProps = {
+const fjord: ConfigProps = {
   site_name: "Carey Rolls", // site name: used in the header and footer
   site_domain: "https://careyrolls.com", // site domain: used in the sitemap
   site_title:

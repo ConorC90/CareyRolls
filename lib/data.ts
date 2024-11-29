@@ -8,6 +8,12 @@ export async function fetchPosts(perPage: number, offset: number) {
       next: { revalidate: 3600 },
     }
   );
+  // const res = await fetch(
+  //   `${fjord.wordpress_url}/wp-json/wp/v2/posts?_embed&per_page=${perPage}&offset=${offset}&orderby=date&categories=${categoryID}`,
+  //   {
+  //     next: { revalidate: 3600 },
+  //   }
+  // );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

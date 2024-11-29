@@ -33,6 +33,11 @@ export default async function Posts({
       : 1;
   const offset = (page - 1) * fjord.posts_per_page;
   const { data, totalPosts } = await fetchPosts(fjord.posts_per_page, offset);
+  // const { data, totalPosts } = await fetchPosts(
+  //   fjord.posts_per_page,
+  //   offset,
+  //   5
+  // );
   const lastPage = Math.ceil(totalPosts / fjord.posts_per_page);
   const tags = await fetchTags();
 

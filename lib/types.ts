@@ -98,7 +98,7 @@ type ContentGridProps = {
   id?: string;
 };
 
-type FjordProps = {
+type ConfigProps = {
   site_name: string;
   site_domain: string;
   site_title: string;
