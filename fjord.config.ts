@@ -4,8 +4,8 @@ const fjord: FjordProps = {
   site_title:
     "Carey Rolls | Biketouring travel blog",
   site_description:
-    "Fjord is an opinionated Next JS and Wordpress starter. It's built to be a solid foundation for your next project.",
-  keywords: ["Bikepacking", "Bike Touring", "Camping Recipes"],
+    "careyrolls is a bike tourning travel blog with recipes and stories from Conor Carey and Alina Rolls",
+  keywords: ["Bikepacking", "Bike Touring", "Camping Recipes","Conor Carey", "Alin Rolls"],
   authors: [{ name: "Conor Carey", url: "https://9d8.dev" }],
   posts_per_page: 9,
   wordpress_url: "https://api.careyrolls.com",
