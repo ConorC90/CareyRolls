@@ -8,7 +8,7 @@ const fjord: FjordProps = {
   keywords: ["Bikepacking", "Bike Touring", "Camping Recipes"],
   authors: [{ name: "Conor Carey", url: "https://9d8.dev" }],
   posts_per_page: 9,
-  wordpress_url: "https://careyrolls.com/",
+  wordpress_url: "https://api.careyrolls.com",
   google_analytics_id: "G-7VM8KZENP7",
 
   logo: "../logo.svg",
