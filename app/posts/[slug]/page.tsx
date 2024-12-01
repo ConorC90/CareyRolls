@@ -1,5 +1,5 @@
-// Fjord Config
-import fjord from "@/fjord.config";
+// careyRolls Config
+import careyRolls from "@/careyRolls.config";
 
 // Component Imports
 import Article from "@/components/content/article-wrapper";
@@ -13,9 +13,12 @@ import type { Metadata } from "next";
 import { fetchPostBySlug } from "@/lib/data";
 
 export async function generateStaticParams() {
-  const res = await fetch(`${fjord.wordpress_url}/wp-json/wp/v2/posts?_embed`, {
-    next: { revalidate: 3600 },
-  });
+  const res = await fetch(
+    `${careyRolls.wordpress_url}/wp-json/wp/v2/posts?_embed`,
+    {
+      next: { revalidate: 3600 },
+    }
+  );
 
   const data: PostProps[] = await res.json();
 
@@ -34,7 +37,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const author = post._embedded?.author?.[0] ?? null;
 
   const metadata: Metadata = {
-    title: `${post.title.rendered} | ${fjord.site_name}`,
+    title: `${post.title.rendered} | ${careyRolls.site_name}`,
     description: post.excerpt?.rendered,
   };
 

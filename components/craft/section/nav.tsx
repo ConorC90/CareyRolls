@@ -1,5 +1,5 @@
-// Fjord Config
-import fjord from "@/fjord.config";
+// careyRolls Config
+import careyRolls from "@/careyRolls.config";
 
 // Next Imports
 import Link from "next/link";
@@ -28,7 +28,12 @@ const Nav = ({ className, children, id }: NavProps) => {
       >
         <Link className="hover:opacity-75 transition-all" href="/">
           <h2 className="sr-only">Craft UI</h2>
-          <Image src={fjord.logo} alt="Logo" width={72} height={48}></Image>
+          <Image
+            src={careyRolls.logo}
+            alt="Logo"
+            width={72}
+            height={48}
+          ></Image>
         </Link>
         {children}
         <div className="flex items-center gap-2">

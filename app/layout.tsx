@@ -4,7 +4,7 @@ import * as Craft from "@/components/craft/layout";
 import Nav from "@/components/craft/section/nav";
 import Footer from "@/components/craft/section/footer";
 import "./globals.css";
-import fjord from "@/fjord.config";
+import careyRolls from "@/careyRolls.config";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -14,17 +14,17 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    template: fjord.site_title,
-    default: `%s | ${fjord.site_name}`,
-    absolute: `Home | ${fjord.site_name}`,
+    template: careyRolls.site_title,
+    default: `%s | ${careyRolls.site_name}`,
+    absolute: `Home | ${careyRolls.site_name}`,
   },
-  description: fjord.site_description,
+  description: careyRolls.site_description,
   generator: "Next.js",
-  applicationName: fjord.site_name,
+  applicationName: careyRolls.site_name,
   referrer: "origin-when-cross-origin",
-  keywords: fjord.keywords,
-  authors: fjord.authors,
-  metadataBase: new URL(fjord.site_domain),
+  keywords: careyRolls.keywords,
+  authors: careyRolls.authors,
+  metadataBase: new URL(careyRolls.site_domain),
   alternates: {
     canonical: "/",
     languages: {
@@ -32,36 +32,36 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: fjord.site_title,
-    description: fjord.site_description,
-    url: fjord.site_domain,
-    siteName: fjord.site_name,
+    title: careyRolls.site_title,
+    description: careyRolls.site_description,
+    url: careyRolls.site_domain,
+    siteName: careyRolls.site_name,
     images: [
       {
-        url: `${fjord.site_domain}/og.png`, // Must be an absolute URL
+        url: `${careyRolls.site_domain}/og.png`, // Must be an absolute URL
         width: 800,
         height: 600,
-        alt: fjord.site_description,
+        alt: careyRolls.site_description,
       },
       {
-        url: `${fjord.site_domain}/og-alt.png`, // Must be an absolute URL
+        url: `${careyRolls.site_domain}/og-alt.png`, // Must be an absolute URL
         width: 1800,
         height: 1600,
-        alt: fjord.site_description,
+        alt: careyRolls.site_description,
       },
     ],
     locale: "en_US",
     type: "website",
   },
-  manifest: `${fjord.site_domain}/manifest.json`, // Must be an absolute URL
+  manifest: `${careyRolls.site_domain}/manifest.json`, // Must be an absolute URL
   twitter: {
     card: "summary_large_image",
-    title: fjord.site_title,
-    description: fjord.site_description,
+    title: careyRolls.site_title,
+    description: careyRolls.site_description,
     // siteId: "1467726470533754880",
     // creator: "@nextjs",
     // creatorId: "1467726470533754880",
-    images: [`${fjord.site_domain}/og.png`], // Must be an absolute URL
+    images: [`${careyRolls.site_domain}/og.png`], // Must be an absolute URL
   },
   icons: {
     icon: [

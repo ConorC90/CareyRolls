@@ -117,34 +117,26 @@ type ConfigProps = {
   menu: {
     main: {
       home: string;
-      blog: string;
+      blog?: string;
       about?: string;
       contact?: string;
       recipes?: string;
+      gallery?: string
     };
     content: {
-      authors: string;
+      authors?: string;
       categories?: string;
       tags?: string;
-      pages: string;
+      pages?: string;
     };
     legal: {
       privacy_policy?: string;
       privacy_policy_text?: string;
       terms_of_service?: string;
       terms_of_service_text?: string;
-    };
-    cta: string;
+    };  
   };
   nav_menu: {
-    title: string;
-    items: {
-      title: string;
-      href: string;
-      description: string;
-    }[];
-  };
-  directory_menu: {
     title: string;
     items: {
       title: string;

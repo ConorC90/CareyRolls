@@ -1,6 +1,6 @@
 import * as Craft from "@/components/craft/layout";
 import PostCard from "@/components/content/post-card";
-import fjord from "@/fjord.config";
+import careyRolls from "@/careyRolls.config";
 import { fetchPosts } from "@/lib/data";
 
 export default async function RecentPosts({
@@ -21,7 +21,7 @@ export default async function RecentPosts({
     <Craft.Section>
       <Craft.Container>
         <div className="flex flex-col gap-6">
-          <h3 className="text-4xl">Latest posts from {fjord.site_name}</h3>
+          <h3 className="text-4xl">Latest posts from {careyRolls.site_name}</h3>
           <h4 className="text-2xl font-thin opacity-70">
             Read the latest from our blog.
           </h4>

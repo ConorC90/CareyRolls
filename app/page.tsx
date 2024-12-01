@@ -1,10 +1,10 @@
 import * as Craft from "@/components/craft/layout";
-import Hero from "@/components/sections/hero";
+import HomePage from "./home/page";
 
 export default function Home() {
   return (
     <Craft.Main>
-      <Hero />
+      <HomePage />
     </Craft.Main>
   );
 }

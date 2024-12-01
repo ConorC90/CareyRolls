@@ -1,5 +1,5 @@
-// Fjord Config
-import fjord from "@/fjord.config";
+// careyRolls Config
+import careyRolls from "@/careyRolls.config";
 
 // Component Imports
 import * as Craft from "@/components/craft/layout";
@@ -17,9 +17,12 @@ import { notFound } from "next/navigation";
 import { fetchPostsByAuthor } from "@/lib/data";
 
 export async function generateStaticParams() {
-  const res = await fetch(`${fjord.wordpress_url}/wp-json/wp/v2/users?_embed`, {
-    next: { revalidate: 3600 },
-  });
+  const res = await fetch(
+    `${careyRolls.wordpress_url}/wp-json/wp/v2/users?_embed`,
+    {
+      next: { revalidate: 3600 },
+    }
+  );
 
   const data: AuthorProps[] = await res.json();
 
@@ -42,18 +45,18 @@ export default async function Page({
   if (!posts) {
     return notFound();
   }
-  const lastPage = Math.ceil(totalPosts / fjord.posts_per_page);
+  const lastPage = Math.ceil(totalPosts / careyRolls.posts_per_page);
 
   const metadata: Metadata = {
-    title: `All Articles by ${author?.name} | ${fjord.site_name}`,
-    description: `The latest articles from ${author?.name} on ${fjord.site_name}.`,
+    title: `All Articles by ${author?.name} | ${careyRolls.site_name}`,
+    description: `The latest articles from ${author?.name} on ${careyRolls.site_name}.`,
   };
 
   return (
     <Craft.Main>
       <SecondaryHero
         title={`All Articles by ${author?.name}`}
-        subtitle={`The latest from ${fjord.site_name}`}
+        subtitle={`The latest from ${careyRolls.site_name}`}
       >
         {author?.description}
       </SecondaryHero>

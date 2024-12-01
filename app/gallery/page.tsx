@@ -1,4 +1,4 @@
-import FAQ from "@/components/sections/faq";
+// import FAQ from "@/components/sections/faq";
 import * as Craft from "@/components/craft/layout";
 import type { Metadata } from "next";
 import careyRolls from "@/careyRolls.config";
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   description: `Learn more about ${careyRolls.site_name}. ${careyRolls.site_description}`,
 };
 
-export async function fetchAboutPage() {
+async function fetchGalleryPage() {
   const res = await fetch(
-    `${careyRolls.wordpress_url}/wp-json/wp/v2/pages?slug=about-us&_embed`,
+    `${careyRolls.wordpress_url}/wp-json/wp/v2/pages?slug=gallery&_embed`,
     {
       next: { revalidate: 3600 },
     }
@@ -25,21 +25,18 @@ export async function fetchAboutPage() {
   return data?.[0];
 }
 
-export default async function Page() {
-  const page: PageProps = await fetchAboutPage();
+export default async function GalleryPage() {
+  const page: PageProps = await fetchGalleryPage();
   if (!page) {
     return notFound();
   }
 
-  const date = new Date(page.date);
-  const author = page._embedded?.author?.[0] ?? null;
   return (
     <Craft.Main>
       <Craft.Container>
         <h1 dangerouslySetInnerHTML={{ __html: page.title.rendered }}></h1>
         <div dangerouslySetInnerHTML={{ __html: page.content.rendered }}></div>
       </Craft.Container>
-      <FAQ />
     </Craft.Main>
   );
 }

@@ -1,5 +1,5 @@
-// Fjord Config
-import fjord from "@/fjord.config";
+// careyRolls Config
+import careyRolls from "@/careyRolls.config";
 
 // Component Imports
 import * as Craft from "@/components/craft/layout";
@@ -15,8 +15,8 @@ import Image from "next/image";
 import { fetchAuthors } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: `Authors | ${fjord.site_name}`,
-  description: `Meet the authors of ${fjord.site_name}. ${fjord.site_description}`,
+  title: `Authors | ${careyRolls.site_name}`,
+  description: `Meet the authors of ${careyRolls.site_name}. ${careyRolls.site_description}`,
 };
 
 export default async function AuthorPosts() {
@@ -25,7 +25,7 @@ export default async function AuthorPosts() {
   return (
     <Craft.Main>
       <SecondaryHero
-        title={`${fjord.site_name} Authors`}
+        title={`${careyRolls.site_name} Authors`}
         subtitle="Our Writers and Authors"
       >
         Select an Author below to see a list of their posts.

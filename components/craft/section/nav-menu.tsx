@@ -1,6 +1,6 @@
 "use client";
 
-import fjord from "@/fjord.config";
+import careyRolls from "@/careyRolls.config";
 import * as React from "react";
 import Link from "next/link";
 
@@ -21,42 +21,11 @@ export function NavMenu() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
-            {fjord.directory_menu.title}
+            {careyRolls.nav_menu.title}
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      {fjord.site_name}
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      {fjord.site_description}
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              {fjord.directory_menu.items.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>{fjord.nav_menu.title}</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 ">
-              {fjord.nav_menu.items.map((component) => (
+            <ul className="grid w-[300px] gap-3 p-6 ">
+              {careyRolls.nav_menu.items.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
@@ -72,6 +41,13 @@ export function NavMenu() {
           <Link href="/posts" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Blog
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/recipes" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Recipes
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

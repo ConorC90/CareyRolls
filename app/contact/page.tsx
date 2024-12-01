@@ -2,11 +2,11 @@ import SecondaryHero from "@/components/sections/secondary-hero";
 import * as Craft from "@/components/craft/layout";
 import ContatctForm from "@/components/forms/contact-form";
 import type { Metadata } from "next";
-import fjord from "@/fjord.config";
+import careyRolls from "@/careyRolls.config";
 
 export const metadata: Metadata = {
-  title: `Contact Us | ${fjord.site_name}`,
-  description: `Contact ${fjord.site_name} today. ${fjord.site_description}`,
+  title: `Contact Us | ${careyRolls.site_name}`,
+  description: `Contact ${careyRolls.site_name} today. ${careyRolls.site_description}`,
 };
 
 export default function Page() {
