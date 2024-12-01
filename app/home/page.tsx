@@ -5,8 +5,8 @@ import careyRolls from "@/careyRolls.config";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: `About Us | ${careyRolls.site_name}`,
-  description: `Learn more about ${careyRolls.site_name}. ${careyRolls.site_description}`,
+  title: `${careyRolls.site_name}`,
+  description: `Landing page for ${careyRolls.site_name}`,
 };
 
 async function fetchAboutPage() {

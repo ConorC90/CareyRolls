@@ -19,9 +19,9 @@ import { fetchTags, fetchCategoryPosts } from "@/lib/data";
 // Meta Data
 export const metadata: Metadata = {
   title: {
-    absolute: `Recipes | ${careyRolls.site_name}`,
+    absolute: `Bike touring Recipes | ${careyRolls.site_name}`,
   },
-  description: `Read the ${careyRolls.site_name} blog. ${careyRolls.site_description}`,
+  description: `Bike tourning and camping recipes`,
 };
 
 export default async function Posts({
@@ -39,11 +39,6 @@ export default async function Posts({
     offset,
     3
   );
-  // const { data, totalPosts } = await fetchPosts(
-  //   careyRolls.posts_per_page,
-  //   offset,
-  //   6
-  // );
   const lastPage = Math.ceil(totalPosts / careyRolls.posts_per_page);
   const tags = await fetchTags();
 

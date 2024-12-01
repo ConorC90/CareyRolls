@@ -6,7 +6,7 @@ import careyRolls from "@/careyRolls.config";
 
 export const metadata: Metadata = {
   title: `Contact Us | ${careyRolls.site_name}`,
-  description: `Contact ${careyRolls.site_name} today. ${careyRolls.site_description}`,
+  description: `Contact ${careyRolls.site_name} today.`,
 };
 
 export default function ContactPage() {

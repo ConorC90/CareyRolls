@@ -27,18 +27,12 @@ const Footer = () => {
             </Link>
             <p>
               <Balancer>
-                Follow along with Conor and Alina on thier bike trip.
+                Follow along with Conor and Alina on their bike trip.
               </Balancer>
             </p>
 
             <div className="flex gap-2">
               <ModeToggle />
-              <Button variant="outline" asChild size="icon">
-                <Link href={"www.google.com"}>
-                  <Mail className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
-                  <span className="sr-only">Visit Twitter</span>
-                </Link>
-              </Button>
               <Button variant="outline" asChild size="icon">
                 <Link href={"www.google.com"}>
                   <Instagram className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
@@ -78,7 +72,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="text-muted-foreground block sm:hidden">
-            © CareyRolls.com 2023-present.
+            © CareyRolls.com 2024-present.
           </p>
         </Craft.Container>
       </Craft.Section>

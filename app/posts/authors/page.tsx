@@ -16,7 +16,7 @@ import { fetchAuthors } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: `Authors | ${careyRolls.site_name}`,
-  description: `Meet the authors of ${careyRolls.site_name}. ${careyRolls.site_description}`,
+  description: `Meet the authors of ${careyRolls.site_name}. Conor Carey and Alina Rolls`,
 };
 
 export default async function AuthorPosts() {

@@ -5,8 +5,8 @@ import careyRolls from "@/careyRolls.config";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: `About Us | ${careyRolls.site_name}`,
-  description: `Learn more about ${careyRolls.site_name}. ${careyRolls.site_description}`,
+  title: `Photo Gallery | ${careyRolls.site_name}`,
+  description: `Bike touring and travel Photo gallery from CareyRolls`,
 };
 
 async function fetchGalleryPage() {
