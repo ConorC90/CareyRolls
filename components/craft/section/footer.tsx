@@ -17,7 +17,7 @@ import { Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t drop-shadow-sm">
+    <footer className="border-t drop-shadow-sm bg-customTeal">
       <Craft.Section>
         <Craft.Container className="grid gap-6 md:grid-cols-2">
           <div className="grid gap-6">
@@ -78,7 +78,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="text-muted-foreground block sm:hidden">
-            Code © <a href="https://9d8.dev">9d8</a>. 2023-present.
+            © CareyRolls.com 2023-present.
           </p>
         </Craft.Container>
       </Craft.Section>

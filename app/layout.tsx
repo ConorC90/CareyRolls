@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  manifest: `${careyRolls.site_domain}/manifest.json`, // Must be an absolute URL
+  // manifest: `${careyRolls.site_domain}/manifest.json`, // Must be an absolute URL
   twitter: {
     card: "summary_large_image",
     title: careyRolls.site_title,
@@ -74,12 +74,6 @@ export const metadata: Metadata = {
       { url: "/apple-icon.png" },
       { url: "/apple-icon-x3.png", sizes: "180x180", type: "image/png" },
     ],
-    // other: [
-    //   {
-    //     rel: "apple-touch-icon-precomposed",
-    //     url: "/apple-touch-icon-precomposed.png",
-    //   },
-    // ],
   },
 };
 

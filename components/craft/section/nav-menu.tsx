@@ -18,7 +18,7 @@ import {
 export function NavMenu() {
   return (
     <NavigationMenu className="hidden sm:block">
-      <NavigationMenuList>
+      <NavigationMenuList className={"navMenu"}>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
             {careyRolls.nav_menu.title}

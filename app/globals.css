@@ -1,11 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bobby+Jones&display=swap');
+
  
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 120 28.6% 97.1%;
     --foreground: 222.2 84% 4.9%;
+
+    --nav-menu:187.6 93.0% 29.0%;
+    --footer-background:196, 70%, 22%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -37,8 +42,8 @@
  
   /* .dark { */
   .dark {
-    /* --background: 222.2 84% 4.9%; */
-    --background: 25, 89%, 61%;
+    --background: 120 28.6% 97.1%;
+    /* --background: pink; */
     --foreground: 210 40% 98%;
  
     --card: 222.2 84% 4.9%;

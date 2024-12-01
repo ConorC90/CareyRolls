@@ -1,4 +1,5 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
+import { NavMenu } from './components/craft/section/nav-menu';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -19,6 +20,11 @@ module.exports = {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				customTeal: '#114b5f',
+				coral: "#f45b69",
+				nav:{
+				navMenu: "hsl(var(--nav-menu))"},
+				footer:{footerBackground:"hsl(var(--footer-background))"},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -55,7 +61,8 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: ['var(--font-sans)', ...fontFamily.sans],
-				serif: ['var(--font-serif)', ...fontFamily.serif]
+				serif: ['var(--font-serif)', ...fontFamily.serif],
+				bobby: ['"BOBBY JONES"', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {
