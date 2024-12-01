@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: `Learn more about ${careyRolls.site_name}. ${careyRolls.site_description}`,
 };
 
-export async function fetchAboutPage() {
+async function fetchAboutPage() {
   const res = await fetch(
     `${careyRolls.wordpress_url}/wp-json/wp/v2/pages?slug=about-us&_embed`,
     {
@@ -25,7 +25,7 @@ export async function fetchAboutPage() {
   return data?.[0];
 }
 
-export default async function Page() {
+export default async function AboutPage() {
   const page: PageProps = await fetchAboutPage();
   if (!page) {
     return notFound();

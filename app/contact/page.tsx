@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: `Contact ${careyRolls.site_name} today. ${careyRolls.site_description}`,
 };
 
-export default function Page() {
+export default function ContactPage() {
   return (
     <Craft.Main>
       <SecondaryHero
