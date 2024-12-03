@@ -32,7 +32,7 @@ const Footer = () => {
             </p>
 
             <div className="flex gap-2">
-              <ModeToggle />
+              {/* <ModeToggle /> */}
               <Button variant="outline" asChild size="icon">
                 <Link href={"www.google.com"}>
                   <Instagram className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />

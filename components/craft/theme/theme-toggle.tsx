@@ -10,9 +10,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useEffect } from "react";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
+
+  // this is just hear to keep the theme on light until I develop 2 different themes
+  useEffect(() => {
+    setTheme("light");
+  }, [setTheme]);
 
   return (
     <DropdownMenu>
