@@ -23,8 +23,11 @@ module.exports = {
 				customTeal: '#114b5f',
 				coral: "#f45b69",
 				nav:{
-				navMenu: "hsl(var(--nav-menu))"},
-				footer:{footerBackground:"hsl(var(--footer-background))"},
+				navMenu: "hsl(var(--nav-menu))"
+				},
+				footer:{
+					footerBackground:"hsl(var(--footer-background))"
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
