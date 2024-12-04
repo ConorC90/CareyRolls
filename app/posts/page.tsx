@@ -15,6 +15,7 @@ import type { Metadata } from "next";
 
 // Data Imports
 import { fetchTags, fetchCategoryPosts } from "@/lib/data";
+import { notFound } from "next/navigation";
 
 // Meta Data
 export const metadata: Metadata = {
@@ -42,17 +43,41 @@ export default async function Posts({
   //   offset,
   //   5
   // );
+  async function fetchBlogPage() {
+    const res = await fetch(
+      `${careyRolls.wordpress_url}/wp-json/wp/v2/pages?slug=blog&_embed`,
+      {
+        next: { revalidate: 3600 },
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch page");
+    }
+
+    const data = await res.json();
+    return data?.[0];
+  }
+
   const lastPage = Math.ceil(totalPosts / careyRolls.posts_per_page);
   const tags = await fetchTags();
-
+  const blogPage: PageProps = await fetchBlogPage();
+  if (!page) {
+    return notFound();
+  }
   return (
     <Craft.Main>
-      <SecondaryHero
-        title="All Posts"
-        subtitle={`${careyRolls.site_name} blog`}
-      >
-        All posts from {careyRolls.site_name}. These are all the posts.
-      </SecondaryHero>
+      <Craft.Section>
+        <Craft.Container>
+          <h1
+            dangerouslySetInnerHTML={{ __html: blogPage.title.rendered }}
+          ></h1>
+          <div
+            dangerouslySetInnerHTML={{ __html: blogPage.content.rendered }}
+          ></div>
+        </Craft.Container>
+      </Craft.Section>
+
       <Craft.Section>
         <Craft.Container>
           <ContentGrid id="posts">

@@ -21,7 +21,6 @@ module.exports = {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				customTeal: '#114b5f',
-				customTeal2: "hsl(var(--nav-menu))",
 				coral: "#f45b69",
 				nav:{
 				navMenu: "hsl(var(--nav-menu))"
@@ -66,7 +65,8 @@ module.exports = {
 			fontFamily: {
 				sans: ['var(--font-sans)', ...fontFamily.sans],
 				serif: ['var(--font-serif)', ...fontFamily.serif],
-				bobby: ['"BOBBY JONES"', 'sans-serif']
+				playfair: ['"Playfair Display"', 'serif'],
+				raleway: ['"Raleway"', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {

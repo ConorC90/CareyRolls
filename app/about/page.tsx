@@ -31,15 +31,17 @@ export default async function AboutPage() {
     return notFound();
   }
 
-  const date = new Date(page.date);
-  const author = page._embedded?.author?.[0] ?? null;
   return (
     <Craft.Main>
-      <Craft.Container>
-        <h1 dangerouslySetInnerHTML={{ __html: page.title.rendered }}></h1>
-        <div dangerouslySetInnerHTML={{ __html: page.content.rendered }}></div>
-      </Craft.Container>
-      <FAQ />
+      <Craft.Section>
+        <Craft.Container>
+          <h1 dangerouslySetInnerHTML={{ __html: page.title.rendered }}></h1>
+          <div
+            dangerouslySetInnerHTML={{ __html: page.content.rendered }}
+          ></div>
+        </Craft.Container>
+        <FAQ />
+      </Craft.Section>
     </Craft.Main>
   );
 }

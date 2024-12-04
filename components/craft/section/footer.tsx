@@ -11,18 +11,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Utility Imports
-import Logo from "@/public/logo.svg";
+import Logo from "@/public/CRlogo.png";
+import BikeLogo from "@/public/CRFooterGraphic.png";
 import Balancer from "react-wrap-balancer";
 import { Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="border-t drop-shadow-sm bg-customTeal">
+      <Craft.Section className="md:py-1 flex justify-center">
+        <Image src={BikeLogo} alt="BikeLogo" width={500} height={500}></Image>
+      </Craft.Section>
       <Craft.Section>
         <Craft.Container className="grid gap-6 md:grid-cols-2">
           <div className="grid gap-6">
             <Link href="/">
-              <h3 className="sr-only">Craft UI</h3>
+              <h3 className="sr-only">CareyRolls footer</h3>
               <Image src={Logo} alt="Logo" width={100} height={50}></Image>
             </Link>
             <p>
@@ -40,6 +44,7 @@ const Footer = () => {
                 </Link>
               </Button>
             </div>
+
             <p className="text-muted-foreground hidden sm:block">
               CareyRolls.com © 2024-present.
             </p>
@@ -72,6 +77,7 @@ const Footer = () => {
               </ul>
             </div> */}
           </div>
+
           <p className="text-muted-foreground block sm:hidden">
             © CareyRolls.com 2024-present.
           </p>
