@@ -33,10 +33,14 @@ export default async function GalleryPage() {
 
   return (
     <Craft.Main>
-      <Craft.Container>
-        <h1 dangerouslySetInnerHTML={{ __html: page.title.rendered }}></h1>
-        <div dangerouslySetInnerHTML={{ __html: page.content.rendered }}></div>
-      </Craft.Container>
+      <Craft.Section>
+        <Craft.Container>
+          <h1 dangerouslySetInnerHTML={{ __html: page.title.rendered }}></h1>
+          <div
+            dangerouslySetInnerHTML={{ __html: page.content.rendered }}
+          ></div>
+        </Craft.Container>
+      </Craft.Section>
     </Craft.Main>
   );
 }

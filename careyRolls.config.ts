@@ -11,7 +11,7 @@ const careyRolls: ConfigProps = {
   wordpress_url: "https://api.careyrolls.com",
   google_analytics_id: "G-7VM8KZENP7",
 
-  logo: "../logo.svg",
+  logo: "/CRlogo.png",
 
   // change the font using `next/font` in `layout.tsx` in the app directory.
   // check out the docs here: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts
