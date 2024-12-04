@@ -11,78 +11,77 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Utility Imports
-import Logo from "@/public/CRlogo.png";
 import BikeLogo from "@/public/CRFooterGraphic.png";
-import Balancer from "react-wrap-balancer";
 import { Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="border-t drop-shadow-sm bg-customTeal">
-      <Craft.Section className="md:py-1 flex justify-center">
-        <Image src={BikeLogo} alt="BikeLogo" width={500} height={500}></Image>
-      </Craft.Section>
-      <Craft.Section>
-        <Craft.Container className="grid gap-6 md:grid-cols-2">
-          <div className="grid gap-6">
-            <Link href="/">
-              <h3 className="sr-only">CareyRolls footer</h3>
-              <Image src={Logo} alt="Logo" width={100} height={50}></Image>
-            </Link>
-            <p>
-              <Balancer>
-                Follow along with Conor and Alina on their bike trip.
-              </Balancer>
-            </p>
-
-            <div className="flex gap-2">
-              {/* <ModeToggle /> */}
-              <Button asChild size="icon">
-                <Link href={"www.google.com"}>
-                  <Instagram className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
-                  <span className="sr-only">Visit Instagram</span>
+      <Craft.Section className="hidden sm:flex flex-col text-center">
+        <Craft.Container className="grid gap-6 p-2">
+          <Image src={BikeLogo} alt="BikeLogo" width={200} height={200}></Image>
+        </Craft.Container>
+        <Craft.Container className="max-w-10xl p-2">
+          <ul className="flex gap-12">
+            {Object.entries(careyRolls.menu.main).map(([key, href]) => (
+              <li key={key}>
+                <Link
+                  href={href}
+                  className="hover:underline hover:text-coral font-bold"
+                >
+                  {key.charAt(0).toUpperCase() + key.slice(1)}
                 </Link>
-              </Button>
-            </div>
-
-            <p className="text-muted-foreground hidden sm:block">
-              CareyRolls.com © 2024-present.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-0">
-            <div className="flex flex-col gap-2">
-              <h4 className="text-muted-foreground">{careyRolls.site_name}</h4>
-              <ul>
-                {Object.entries(careyRolls.menu.main).map(([key, href]) => (
-                  <li key={key}>
-                    <Link href={href}>
-                      {key.charAt(0).toUpperCase() + key.slice(1)}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* <div className="flex flex-col gap-2">
-              <h4 className="text-muted-foreground">Legal</h4>
-              <ul>
-                {Object.entries(careyRolls.menu.content).map(([key, href]) => (
-                  <li key={key}>
-                    <Link href={href}>
-                      {key.charAt(0).toUpperCase() + key.slice(1)}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
-          </div>
-
-          <p className="text-muted-foreground block sm:hidden">
-            © CareyRolls.com 2024-present.
-          </p>
+              </li>
+            ))}
+          </ul>
+        </Craft.Container>
+        <Craft.Container>
+          <Button asChild size="icon">
+            <Link
+              className="flex items-center justify-center"
+              href="https://www.google.com"
+            >
+              <Instagram className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+              <span className="sr-only">Visit Instagram</span>
+            </Link>
+          </Button>
         </Craft.Container>
       </Craft.Section>
+
+      <Craft.Section className="block md:hidden flex flex-col text-center">
+        <Craft.Container className="flex items-center">
+          <Image src={BikeLogo} alt="BikeLogo" width={200} height={200}></Image>
+        </Craft.Container>
+
+        <Craft.Container>
+          <h4 className="text-muted-foreground">{careyRolls.site_name}</h4>
+          <ul>
+            {Object.entries(careyRolls.menu.main).map(([key, href]) => (
+              <li key={key}>
+                <Link href={href}>
+                  {key.charAt(0).toUpperCase() + key.slice(1)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Craft.Container>
+        <Craft.Container className="flex items-center">
+          <Button asChild size="icon">
+            <Link
+              className="flex items-center justify-center"
+              href="https://www.google.com"
+            >
+              <Instagram className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+              <span className="sr-only">Visit Instagram</span>
+            </Link>
+          </Button>
+        </Craft.Container>
+      </Craft.Section>
+      <Craft.Container className="md:p-1">
+        <p className="text-center text-muted-foreground block">
+          © CareyRolls.com 2024-present.
+        </p>
+      </Craft.Container>
     </footer>
   );
 };

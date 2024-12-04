@@ -22,6 +22,8 @@ module.exports = {
 				foreground: 'hsl(var(--foreground))',
 				customTeal: '#114b5f',
 				coral: "#f45b69",
+				offwhite:"#f8fff8",
+				// offwhite:"#f45b69",
 				nav:{
 				navMenu: "hsl(var(--nav-menu))"
 				},

@@ -12,9 +12,12 @@ const Layout = ({ children, className }: LayoutProps) => {
   return (
     <html
       lang="en"
-      className={cn("antialiased scroll-smooth focus:scroll-auto", className)}
+      className={cn(
+        "antialiased scroll-smooth bg-offwhite color-offwhite focus:scroll-auto",
+        className
+      )}
     >
-      <body className={cn("flex flex-col min-h-screen flex-grow", className)}>
+      <body className={cn("flex flex-col min-h-screen  flex-grow", className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
