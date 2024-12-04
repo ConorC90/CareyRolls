@@ -20,22 +20,11 @@ export function NavMenu() {
     <NavigationMenu className="hidden sm:block">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>
-            {careyRolls.nav_menu.title}
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[300px] gap-3 p-6 ">
-              {careyRolls.nav_menu.items.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
+          <Link href="/about" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              About us
+            </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/posts" legacyBehavior passHref>
@@ -48,6 +37,13 @@ export function NavMenu() {
           <Link href="/recipes" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Recipes
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/gallery" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Gallery
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

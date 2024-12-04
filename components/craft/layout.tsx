@@ -14,7 +14,7 @@ const Layout = ({ children, className }: LayoutProps) => {
       lang="en"
       className={cn("antialiased scroll-smooth focus:scroll-auto", className)}
     >
-      <body className={className}>
+      <body className={cn("flex flex-col min-h-screen flex-grow", className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -40,7 +40,7 @@ const Main = ({ children, className, id }: MainProps) => {
     <main
       className={cn(
         // General Prose
-        "prose prose:font-sans md:prose-lg lg:prose-xl max-w-none",
+        "prose prose:font-sans md:prose-lg lg:prose-xl max-w-none flex-grow",
         // Prose Headings
         "prose-headings:font-normal",
         // Inline Links
