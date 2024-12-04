@@ -5,6 +5,7 @@ import Nav from "@/components/craft/section/nav";
 import Footer from "@/components/craft/section/footer";
 import "./globals.css";
 import careyRolls from "@/careyRolls.config";
+import { cn } from "@/lib/utils";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -15,7 +16,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: {
     template: careyRolls.site_title,
-    default: `%s | ${careyRolls.site_name}`,
+    default: `Home | ${careyRolls.site_name}`,
     absolute: `Home | ${careyRolls.site_name}`,
   },
   description: careyRolls.site_description,
@@ -83,7 +84,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <Craft.Layout className={`${manrope.variable}`}>
+    <Craft.Layout className={cn("flex-grow", `${manrope.variable}`)}>
       <Nav />
       {children}
       <Footer />
