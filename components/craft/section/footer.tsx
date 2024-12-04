@@ -33,10 +33,10 @@ const Footer = () => {
 
             <div className="flex gap-2">
               {/* <ModeToggle /> */}
-              <Button variant="outline" asChild size="icon">
+              <Button asChild size="icon">
                 <Link href={"www.google.com"}>
                   <Instagram className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
-                  <span className="sr-only">Visit Twitter</span>
+                  <span className="sr-only">Visit Instagram</span>
                 </Link>
               </Button>
             </div>
@@ -58,8 +58,9 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-muted-foreground">Blog</h4>
+
+            {/* <div className="flex flex-col gap-2">
+              <h4 className="text-muted-foreground">Legal</h4>
               <ul>
                 {Object.entries(careyRolls.menu.content).map(([key, href]) => (
                   <li key={key}>
@@ -69,7 +70,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
           <p className="text-muted-foreground block sm:hidden">
             © CareyRolls.com 2024-present.
