@@ -35,7 +35,7 @@ const Footer = () => {
             ))}
           </ul>
         </Craft.Container>
-        <Craft.Container>
+        <Craft.Container className="p-2">
           <Button asChild size="icon">
             <Link
               className="flex items-center justify-center"
@@ -65,7 +65,7 @@ const Footer = () => {
             ))}
           </ul>
         </Craft.Container>
-        <Craft.Container className="flex items-center">
+        <Craft.Container className="flex p-2 items-center">
           <Button asChild size="icon">
             <Link
               className="flex items-center justify-center"
