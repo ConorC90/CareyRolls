@@ -19,11 +19,11 @@ const PostCard = ({ post, tags = [] }: PostCardProps) => {
     <Link
       id="post-card"
       href={`/posts/${post.slug}`}
-      className="group flex flex-col not-prose gap-2 transition-all hover:-mt-1 hover:mb-1"
+      className="group flex flex-col not-prose gap-2 transition-all hover:-mt-1 hover:mb-1 border-2 border-customTeal p-4 rounded-md "
       key={post.id}
     >
       {featuredMedia && (
-        <div className="relative mb-2 h-56 overflow-hidden border shadow-sm rounded-md transition-all group-hover:opacity-75">
+        <div className="relative mb-2 h-56 overflow-hidden border shadow-sm rounded-md transition-all group-hover:opacity-75 ">
           {/* eslint-disable-next-line */}
           <img
             src={featuredMedia}

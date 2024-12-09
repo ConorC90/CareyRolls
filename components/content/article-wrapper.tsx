@@ -1,10 +1,13 @@
 // Next Imports
 import Link from "next/link";
+import Image from "next/image";
 
 // Component Imports
 import * as Craft from "@/components/craft/layout";
 import BackButton from "../global/elements/back-button";
 import AboutAuthor from "./about-author";
+
+import BikeLogo from "@/public/CRFooterGraphic.png";
 
 const Article = ({ post, date, author }: ArticleProps) => {
   return (
@@ -33,6 +36,15 @@ const Article = ({ post, date, author }: ArticleProps) => {
             dangerouslySetInnerHTML={{ __html: post.content.rendered }}
           ></div>
 
+          <div className="flex items-center justify-center">
+            <Image
+              src={BikeLogo}
+              alt="BikeLogo"
+              width={200}
+              height={200}
+              className="no-border"
+            ></Image>
+          </div>
           <BackButton />
         </Craft.Article>
 

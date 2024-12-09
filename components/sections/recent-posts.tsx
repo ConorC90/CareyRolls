@@ -20,12 +20,12 @@ export default async function RecentPosts({
   return (
     <Craft.Section>
       <Craft.Container>
-        <div className="flex flex-col gap-6">
+        <div className="flex text-black flex-col border-red-500 gap-6">
           <h3 className="text-4xl">Latest posts from {careyRolls.site_name}</h3>
           <h4 className="text-2xl font-thin opacity-70">
             Read the latest from our blog.
           </h4>
-          <div className="m-auto grid max-w-6xl gap-6 sm:grid-cols-2 md:grid-cols-3 mt-6 md:mt-12">
+          <div className="m-auto grid max-w-6xl gap-6 sm:grid-cols-2 md:grid-cols-3 mt-6 md:mt-12 ">
             {filteredPosts.map((post: PostProps) => (
               <PostCard key={post.id} post={post} />
             ))}

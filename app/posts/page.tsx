@@ -12,10 +12,12 @@ import { Separator } from "@/components/ui/separator";
 
 // Next Imports
 import type { Metadata } from "next";
+import Image from "next/image";
 
 // Data Imports
 import { fetchTags, fetchCategoryPosts } from "@/lib/data";
 import { notFound } from "next/navigation";
+import BikeLogo from "@/public/CRFooterGraphic.png";
 
 // Meta Data
 export const metadata: Metadata = {
