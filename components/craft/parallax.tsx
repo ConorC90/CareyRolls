@@ -8,7 +8,8 @@ const Parallax = ({ backgroundImage }: { backgroundImage: any }) => {
 
   const handleScroll = () => {
     if (parallaxRef.current) {
-      const parallaxOffset = window.pageYOffset - parallaxRef.current.offsetTop;
+      const parallaxOffset =
+        window.pageYOffset - parallaxRef.current.getBoundingClientRect().top;
       setOffset(parallaxOffset);
     }
   };
@@ -30,8 +31,8 @@ const Parallax = ({ backgroundImage }: { backgroundImage: any }) => {
       />
       <div className="relative h-full w-full flex items-center justify-center">
         <div className="text-white text-center">
-          <h1 className="text-5xl text-white font-bold mb-5">CareyRolls</h1>
-          <p className="text-xl">Follow along with Conor and Alina</p>
+          <h1 className=" text-white font-bold mb-5">Carey Rolls</h1>
+          <p className="">Follow along with Conor and Alina</p>
         </div>
       </div>
     </div>

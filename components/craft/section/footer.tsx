@@ -36,7 +36,7 @@ const Footer = () => {
           </ul>
         </Craft.Container>
         <Craft.Container className="p-2">
-          <Button asChild size="icon">
+          <Button variant={"ghost"} asChild size="icon">
             <Link
               className="flex items-center justify-center"
               href="https://www.google.com"
@@ -55,7 +55,7 @@ const Footer = () => {
 
         <Craft.Container>
           <h4 className="text-muted-foreground">{careyRolls.site_name}</h4>
-          <ul>
+          <ul className="text-white">
             {Object.entries(careyRolls.menu.main).map(([key, href]) => (
               <li key={key}>
                 <Link href={href}>
@@ -66,7 +66,7 @@ const Footer = () => {
           </ul>
         </Craft.Container>
         <Craft.Container className="flex p-2 items-center">
-          <Button asChild size="icon">
+          <Button variant={"ghost"} asChild size="icon">
             <Link
               className="flex items-center justify-center"
               href="https://www.google.com"
