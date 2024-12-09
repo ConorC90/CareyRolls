@@ -28,10 +28,7 @@ const PageBody = ({ page, date }: PageProps) => {
             />
           )}
 
-        <div
-          className="prose prose-p:font-light prose-headings:font-normal prose-strong:font-normal lg:prose-lg dark:prose-invert"
-          dangerouslySetInnerHTML={{ __html: page.content.rendered }}
-        ></div>
+        <div className="prose prose-p:font-light prose-headings:font-normal prose-strong:font-normal lg:prose-lg"></div>
       </Craft.Container>
     </Craft.Section>
   );

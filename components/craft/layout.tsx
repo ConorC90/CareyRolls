@@ -12,10 +12,7 @@ const Layout = ({ children, className }: LayoutProps) => {
   return (
     <html
       lang="en"
-      className={cn(
-        "antialiased scroll-smooth bg-offwhite color-offwhite focus:scroll-auto",
-        className
-      )}
+      className={cn("scroll-smooth bg-offwhite focus:scroll-auto", className)}
     >
       <body className={cn("flex flex-col min-h-screen  flex-grow", className)}>
         <ThemeProvider
@@ -102,8 +99,8 @@ const Article = ({ children, className, id }: ArticleProps) => {
   return (
     <article
       className={cn(
-        "prose dark:prose-invert md:prose-lg lg:prose-xl",
-        "prose-headings:font-normal prose-main dark:prose-invert",
+        "prose md:prose-lg lg:prose-xl",
+        "prose-headings:font-normal prose-main ",
         "prose-img:rounded-lg prose-img:shadow-lg prose-img:border",
         className
       )}
