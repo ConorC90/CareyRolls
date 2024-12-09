@@ -14,7 +14,7 @@ export default function Home() {
       </div> */}
       <Parallax
         backgroundImage={
-          "https://api.careyrolls.com/wp-content/uploads/2024/12/WhatsApp-Image-2024-09-09-at-11.49.44-1.jpeg"
+          "https://api.careyrolls.com/wp-content/uploads/2024/12/WhatsApp-Image-2024-09-09-at-11.49.44-2.jpeg"
         }
       ></Parallax>
       <HomePage />
