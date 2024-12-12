@@ -49,6 +49,30 @@ export async function fetchCategoryPosts(perPage: number, offset: number ,catego
   return { data, totalPosts };
 }
 
+export async function fetchGalleryPosts(perPage: number, offset: number ,categoryID:number) {
+console.log(  `${careyRolls.wordpress_url}/wp-json/wp/v2/posts?_embed&per_page=${perPage}&offset=${offset}&orderby=date&categories=${categoryID}`)
+  const res = await fetch(
+    `${careyRolls.wordpress_url}/wp-json/wp/v2/posts?_embed&per_page=${perPage}&offset=${offset}&orderby=date&categories=${categoryID}`,
+    {
+      next: { revalidate: 3600 },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data: PostProps[] = await res.json();
+  const totalPosts = Number(res.headers.get("X-WP-Total"));
+
+  // Sort posts by date
+  data.sort(
+    (a: PostProps, b: PostProps) =>
+      new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+  return { data, totalPosts };
+}
+
 
 // Fetch Tags
 export async function fetchTags() {

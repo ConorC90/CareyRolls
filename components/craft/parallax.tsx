@@ -1,42 +1,12 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
+import { Parallax } from "react-scroll-parallax";
 
-const Parallax = ({ backgroundImage }: { backgroundImage: any }) => {
-  const [offset, setOffset] = useState(0);
-  const parallaxRef = useRef<HTMLDivElement>(null);
-
-  const handleScroll = () => {
-    if (parallaxRef.current) {
-      const parallaxOffset =
-        window.pageYOffset - parallaxRef.current.getBoundingClientRect().top;
-      setOffset(parallaxOffset);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+export default function ParallaxComponent() {
   return (
-    <div ref={parallaxRef} className="relative overflow-hidden h-screen w-full">
-      <div
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          transform: `translateY(${offset * 0.5}px)`,
-        }}
-        className="absolute inset-0 bg-cover bg-fixed bg-center"
-      />
-      <div className="relative h-full w-full flex items-center justify-center">
-        <div className="text-white text-center">
-          <h1 className=" text-white font-bold mb-5">Carey Rolls</h1>
-          <p className="">Follow along with Conor and Alina</p>
-        </div>
-      </div>
-    </div>
+    <Parallax scale={[1, 0]}>
+      <div className="w-48 h-48 bg-red-500" />
+    </Parallax>
   );
-};
-
-export default Parallax;
+}

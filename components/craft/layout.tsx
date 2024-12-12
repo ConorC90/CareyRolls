@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "./theme/theme-provider";
-
+import { ParallaxProvider } from "react-scroll-parallax";
+import { Providers } from "@/app/providers";
 // LAYOUT
 // Layout Component
 type LayoutProps = {
@@ -21,7 +22,7 @@ const Layout = ({ children, className }: LayoutProps) => {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Providers>{children}</Providers>
         </ThemeProvider>
       </body>
     </html>
