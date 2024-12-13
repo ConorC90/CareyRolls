@@ -26,7 +26,8 @@ export async function fetchPosts(perPage: number, offset: number ) {
 
 
 export async function fetchCategoryPosts(perPage: number, offset: number ,categoryID:number) {
-
+console.log(`${careyRolls.wordpress_url}/wp-json/wp/v2/posts?_embed&per_page=${perPage}&offset=${offset}&orderby=date&categories=${categoryID}`,
+)
   const res = await fetch(
     `${careyRolls.wordpress_url}/wp-json/wp/v2/posts?_embed&per_page=${perPage}&offset=${offset}&orderby=date&categories=${categoryID}`,
     {
