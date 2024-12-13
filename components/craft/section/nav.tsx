@@ -28,7 +28,7 @@ const Nav = ({ className, children, id }: NavProps) => {
       const currentScrollY = window.scrollY;
 
       // Set the navbar to be invisible if scrolling down, and visible if scrolling up
-      setIsVisible(lastScrollY > currentScrollY || currentScrollY < 10);
+      setIsVisible(lastScrollY > currentScrollY || currentScrollY < 90);
 
       // Update the last scroll position
       setLastScrollY(currentScrollY);
