@@ -27,14 +27,18 @@ export default function Test() {
           className: "bg-center bg-cover",
         },
 
-        // {
-        //   speed: -25,
-        //   children: (
-        //     <div className="absolute inset-0 flex items-center justify-center">
-        //       <h1 className="text-8xl text-black font-thin">Hello World!</h1>
-        //     </div>
-        //   ),
-        // },
+        {
+          speed: -25,
+          children: (
+            <div className="absolute inset-0 flex-col flex items-center text-center justify-center">
+              <h1 className="text-8xl text-white font-thin">Carey Rolls</h1>
+              <p className="text-xl text-white font-thin pt-12">
+                Follow allong with Conor and Alina
+              </p>
+            </div>
+          ),
+        },
+
         // { image: "/CRFooterGraphic.png", speed: -10 },
       ]}
       className="aspect-[16/9] w-full h-screen"
