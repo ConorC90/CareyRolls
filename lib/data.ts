@@ -188,3 +188,23 @@ export async function fetchPages() {
 
   return res.json();
 }
+export async function fetchAllImages() {
+
+  const res = await fetch(
+    `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,
+    {
+      headers: {
+        Authorization: `Basic ${Buffer.from(
+          process.env.CLOUDINARY_CLOUD_KEY +
+            ":" +
+            process.env.CLOUDINARY_CLOUD_SECRET
+        ).toString("base64")}`,
+      },
+    }
+  ) 
+   if (!res.ok) {
+    throw new Error("Failed to fetch all images");
+  }
+ return res.json();
+}
+
