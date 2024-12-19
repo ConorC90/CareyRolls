@@ -11,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Utility Imports
-import BikeLogo from "@/public/CRFooterGraphic.png";
+import BikeLogo from "@/public/CRFooterWhite.png";
 import { Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="border-t drop-shadow-sm bg-customTeal">
       <Craft.Section className="hidden sm:flex flex-col text-center">
         <Craft.Container className="grid gap-6 p-2">
-          <Image src={BikeLogo} alt="BikeLogo" width={200} height={200}></Image>
+          <Image src={BikeLogo} alt="BikeLogo" width={250} height={200}></Image>
         </Craft.Container>
         <Craft.Container className="max-w-10xl p-2">
           <ul className="flex gap-12">
