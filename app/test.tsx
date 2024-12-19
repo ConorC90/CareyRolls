@@ -21,7 +21,6 @@ export default function Test() {
           className: "bg-center bg-cover",
         },
         {
-          // image: "/careyandrolls.png",
           speed: -30,
           className: "flex justify-center items-center",
           children: (
