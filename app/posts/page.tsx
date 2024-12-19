@@ -25,11 +25,7 @@ export const metadata: Metadata = {
   description: `Read the ${careyRolls.site_name} blog. ${careyRolls.site_description}`,
 };
 
-export default async function Posts({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
+export default async function Posts({ searchParams }: { searchParams: any }) {
   const page =
     typeof searchParams.page === "string" && +searchParams.page > 1
       ? +searchParams.page
