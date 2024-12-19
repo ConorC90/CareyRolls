@@ -31,11 +31,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { slug: string; name: string; page: string };
-}) {
+export default async function Page({ params }: { params: any }) {
   const page = parseInt(params?.page, 10) || 1;
   const {
     data: posts,

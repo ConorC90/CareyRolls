@@ -195,20 +195,7 @@ type NavProps = {
   id?: string;
 };
 
-type PageProps = {
-  id: number;
-  title: RenderedContentProps;
-  date: string;
-  slug: string;
-  content: RenderedContentProps;
-  excerpt: RenderedContentProps;
-  _embedded: EmbeddedMediaProps;
-  page: {
-    title: RenderedContentProps;
-    content: RenderedContentProps;
-    _embedded?: EmbeddedMediaProps;
-  };
-};
+type PageProps =any
 
 type faqProps = {
   question: string;

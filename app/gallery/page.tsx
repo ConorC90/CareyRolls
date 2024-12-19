@@ -25,11 +25,7 @@ export const metadata: Metadata = {
   description: `Bike tourning and camping photos`,
 };
 
-export default async function Posts({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
+export default async function Posts({ searchParams }: { searchParams: any }) {
   const page =
     typeof searchParams.page === "string" && +searchParams.page > 1
       ? +searchParams.page

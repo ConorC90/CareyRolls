@@ -27,7 +27,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: any }) {
   const post: PostProps = await fetchPostBySlug(params?.slug);
   if (!post) {
     return notFound();
