@@ -25,17 +25,7 @@ export const metadata: Metadata = {
   description: `Bike tourning and camping photos`,
 };
 
-export default async function Posts({ searchParams }: { searchParams: any }) {
-  const page =
-    typeof searchParams.page === "string" && +searchParams.page > 1
-      ? +searchParams.page
-      : 1;
-  const offset = (page - 1) * careyRolls.posts_per_page;
-  const { data, totalPosts } = await fetchCategoryPosts(
-    careyRolls.posts_per_page,
-    offset,
-    9
-  );
+export default async function Posts() {
   // const lastPage = Math.ceil(totalPosts / careyRolls.posts_per_page);
   // const tags = await fetchTags();
 

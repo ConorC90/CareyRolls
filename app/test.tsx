@@ -1,47 +1,32 @@
 "use client";
+import dynamic from "next/dynamic";
+import React from "react";
 
-import { ParallaxBanner } from "react-scroll-parallax";
+const ParallaxBannerNoSSR = dynamic(
+  () => import("react-scroll-parallax").then((mod) => mod.ParallaxBanner),
+  {
+    ssr: false,
+  }
+);
+
+const bannerClass = "w-full h-screen"; // Fullscreen banner class
 
 export default function Test() {
   return (
-    <ParallaxBanner
+    <ParallaxBannerNoSSR
       layers={[
         {
-          image: "/rezghob_rts_parallax_landscape_mountains_layer4.webp",
-          speed: -10,
-          className: "bg-center bg-cover",
+          image: "landscape.JPG",
+          speed: 20,
+          className: "bg-center bg-contain",
         },
         {
-          image: "/rezghob_rts_parallax_landscape_mountains_layer3.webp",
-          speed: -20,
-          className: "bg-center bg-cover",
-        },
-        {
-          image: "/rezghob_rts_parallax_landscape_mountains_layer2.webp",
+          image: "/careyandrolls.png",
           speed: -30,
-          className: "bg-center bg-cover",
+          className: `bg-center bg-contain`,
         },
-        {
-          image: "/rezghob_rts_parallax_landscape_mountains_layer1.webp",
-          speed: -40,
-          className: "bg-center bg-cover",
-        },
-
-        {
-          speed: -25,
-          children: (
-            <div className="absolute inset-0 flex-col flex items-center text-center justify-center">
-              <h1 className="text-8xl text-white font-thin">Carey Rolls</h1>
-              <p className="text-xl text-white font-thin pt-12">
-                Follow allong with Conor and Alina
-              </p>
-            </div>
-          ),
-        },
-
-        // { image: "/CRFooterGraphic.png", speed: -10 },
       ]}
-      className="aspect-[16/9] w-full h-screen"
+      className={bannerClass}
     />
   );
 }
