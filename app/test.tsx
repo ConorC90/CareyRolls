@@ -18,12 +18,18 @@ export default function Test() {
         {
           image: "landscape.JPG",
           speed: 20,
-          className: "bg-center bg-contain",
+          className: "bg-center bg-cover",
         },
         {
-          image: "/careyandrolls.png",
+          // image: "/careyandrolls.png",
           speed: -30,
-          className: `bg-center bg-contain`,
+          className: "flex justify-center items-center",
+          children: (
+            <div
+              className="bg-center bg-contain bg-no-repeat w-full h-full sm:w-3/4 sm:h-3/4 md:w-1/2 md:h-1/2"
+              style={{ backgroundImage: "url(/careyandrolls.png)" }}
+            />
+          ),
         },
       ]}
       className={bannerClass}
