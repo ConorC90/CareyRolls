@@ -17,12 +17,12 @@ import { Instagram, Mail } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="border-t drop-shadow-sm bg-customTeal">
-      <Craft.Section className="hidden sm:flex flex-col text-center">
+      <Craft.Section className="hidden md:flex sm:flex flex-col text-center">
         <Craft.Container className="grid gap-6 p-2">
           <Image src={BikeLogo} alt="BikeLogo" width={250} height={200}></Image>
         </Craft.Container>
         <Craft.Container className="max-w-10xl p-2">
-          <ul className="flex gap-12">
+          <ul className="flex gap-12 text-white">
             {Object.entries(careyRolls.menu.main).map(([key, href]) => (
               <li key={key}>
                 <Link
@@ -48,7 +48,7 @@ const Footer = () => {
         </Craft.Container>
       </Craft.Section>
 
-      <Craft.Section className="block md:hidden flex flex-col text-center">
+      <Craft.Section className="block md:hidden sm:hidden flex flex-col text-center">
         <Craft.Container className="flex items-center">
           <Image src={BikeLogo} alt="BikeLogo" width={200} height={200}></Image>
         </Craft.Container>
