@@ -53,20 +53,20 @@ const Nav = ({ className, children, id }: NavProps) => {
       } ${className}`}
       id={id}
     >
-      <Link className="hover:opacity-75 transition-all px-8" href="/">
+      <Link className="hover:opacity-75 mx-auto transition-all px-8" href="/">
         <h2 className="sr-only">Carey Rolls</h2>
         <Image src={Logo} alt="Logo" width={50} height={48}></Image>
       </Link>
       {children}
       <div
         id="nav-container"
-        className="max-w-5xl mx-auto p2-4 px-6 sm:px-8 flex justify-center items-center"
+        className="max-w-2xl  p2-4 px-6 mx-auto sm:px-8 flex justify-center items-center"
       >
         <div className="flex items-center gap-2 justify-center">
           <NavMenu />
         </div>
       </div>
-      <div className="flex justify-end px-10">
+      <div className="flex mx-auto justify-end px-10">
         <MobileNav />
       </div>
     </nav>
