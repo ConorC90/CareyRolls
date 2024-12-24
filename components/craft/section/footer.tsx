@@ -39,7 +39,7 @@ const Footer = () => {
           <Button variant={"ghost"} asChild size="icon">
             <Link
               className="flex items-center justify-center"
-              href="https://www.google.com"
+              href="https://www.instagram.com/careyandrolls/"
             >
               <Instagram className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
               <span className="sr-only">Visit Instagram</span>
@@ -69,7 +69,7 @@ const Footer = () => {
           <Button variant={"ghost"} asChild size="icon">
             <Link
               className="flex items-center justify-center"
-              href="https://www.google.com"
+              href="https://www.instagram.com/careyandrolls/"
             >
               <Instagram className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
               <span className="sr-only">Visit Instagram</span>
