@@ -26,16 +26,13 @@ export function MobileNav() {
       <SheetTrigger asChild>
         <Button
           variant="ghost"
-          className="px-0 w-10 text-base text-white focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className="px-0 w-10 text-base text-coral focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         >
           <Menu />
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent
-        side="right"
-        className="pr-0 text-red text-white bg-customTeal"
-      >
+      <SheetContent side="right" className="pr-50 text-white bg-customTeal">
         <MobileLink
           href="/"
           className="flex items-center"
