@@ -1,30 +1,56 @@
-import SecondaryHero from "@/components/sections/secondary-hero";
-import * as Craft from "@/components/craft/layout";
-import ContatctForm from "@/components/forms/contact-form";
-import type { Metadata } from "next";
+// careyRolls Config
 import careyRolls from "@/careyRolls.config";
 
+// Component Imports
+import * as Craft from "@/components/craft/layout";
+
+// Next Imports
+import type { Metadata } from "next";
+
+// Data Imports
+
+// Meta Data
 export const metadata: Metadata = {
-  title: `Contact Us | ${careyRolls.site_name}`,
-  description: `Contact ${careyRolls.site_name} today.`,
+  title: {
+    absolute: `Carey Rolls Contact page | ${careyRolls.site_name}`,
+  },
+  description: `The Conotact page for Conor Carey and Alina Rolls`,
 };
 
-export default function ContactPage() {
+export default async function ContactUS({
+  searchParams,
+}: {
+  searchParams: any;
+}) {
+  async function fetchContactPage() {
+    const res = await fetch(
+      `${careyRolls.wordpress_url}/wp-json/wp/v2/pages?slug=contact-us&_embed`,
+      {
+        next: { revalidate: 3600 },
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch page");
+    }
+
+    const data = await res.json();
+    return data?.[0];
+  }
+  const contactPage: PageProps = await fetchContactPage();
+
   return (
     <Craft.Main>
-      <SecondaryHero
-        title="Contact us"
-        subtitle="Fill out the form to contact us"
-      >
-        This is the contact page! it uses{" "}
-        <a href="https://tally.so">tally.so</a> to pull the embedded form. To
-        change this form simply change the `formId` prop.
-      </SecondaryHero>
       <Craft.Section>
         <Craft.Container>
-          <ContatctForm />
+          <h1
+            dangerouslySetInnerHTML={{ __html: contactPage.title.rendered }}
+          ></h1>
+          <div
+            dangerouslySetInnerHTML={{ __html: contactPage.content.rendered }}
+          ></div>
         </Craft.Container>
-      </Craft.Section>{" "}
+      </Craft.Section>
     </Craft.Main>
   );
 }

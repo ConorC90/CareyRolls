@@ -34,6 +34,13 @@ export function NavMenu() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
+          <Link href="/contact" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contact us
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        {/*  <NavigationMenuItem>
           <Link href="/recipes" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Recipes
@@ -46,7 +53,7 @@ export function NavMenu() {
               Gallery
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );
