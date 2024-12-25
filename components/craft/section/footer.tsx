@@ -54,7 +54,7 @@ const Footer = () => {
         </Craft.Container>
 
         <Craft.Container>
-          <h4 className="text-muted-foreground">{careyRolls.site_name}</h4>
+          <h4 className="text-coral">{careyRolls.site_name}</h4>
           <ul className="text-white">
             {Object.entries(careyRolls.menu.main).map(([key, href]) => (
               <li key={key}>
@@ -78,7 +78,7 @@ const Footer = () => {
         </Craft.Container>
       </Craft.Section>
       <Craft.Container className="md:p-1">
-        <p className="text-center text-muted-foreground block">
+        <p className="text-center text-coral block">
           © CareyRolls.com 2024-present.
         </p>
       </Craft.Container>
