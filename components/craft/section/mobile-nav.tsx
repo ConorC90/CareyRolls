@@ -33,14 +33,14 @@ export function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="pr-50 text-white bg-customTeal">
-        <MobileLink
+        {/*    <MobileLink
           href="/"
           className="flex items-center"
           onOpenChange={setOpen}
-        >
-          <ArrowRightSquare className="mr-2 h-4 w-4" />
-          <span className="text-muted-foreground">{careyRolls.site_name}</span>
-        </MobileLink>
+        > */}
+        {/*  <ArrowRightSquare className="mr-2 h-4 w-4" />
+          <span className="text-muted-foreground">{careyRolls.site_name}</span> */}
+        {/* </MobileLink> */}
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
             <h3 className="text-small mt-6 font-bold">Menu</h3>

@@ -41,7 +41,7 @@ const Footer = () => {
               className="flex items-center justify-center"
               href="https://www.instagram.com/careyandrolls/"
             >
-              <Instagram className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+              <Instagram className="h-[2.2rem] w-[2.2rem] rotate-0 scale-100 transition-all" />
               <span className="sr-only">Visit Instagram</span>
             </Link>
           </Button>
@@ -71,7 +71,7 @@ const Footer = () => {
               className="flex items-center justify-center"
               href="https://www.instagram.com/careyandrolls/"
             >
-              <Instagram className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+              <Instagram className="h-[2.2rem] w-[2.2rem] rotate-0 scale-100 transition-all" />
               <span className="sr-only">Visit Instagram</span>
             </Link>
           </Button>
