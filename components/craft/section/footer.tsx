@@ -35,13 +35,14 @@ const Footer = () => {
             ))}
           </ul>
         </Craft.Container>
-        <Craft.Container className="p-2">
+        <Craft.Container className="flex p-2 items-center">
           <Button variant={"ghost"} asChild size="icon">
             <Link
               className="flex items-center justify-center"
               href="https://www.instagram.com/careyandrolls/"
             >
-              <Instagram className="h-[2.2rem] w-[2.2rem] rotate-0 scale-100 transition-all" />
+              {/* Use text-white to color the Instagram icon white */}
+              <Instagram className="h-[2.2rem] w-[2.2rem] text-white transition-all" />
               <span className="sr-only">Visit Instagram</span>
             </Link>
           </Button>
@@ -71,7 +72,8 @@ const Footer = () => {
               className="flex items-center justify-center"
               href="https://www.instagram.com/careyandrolls/"
             >
-              <Instagram className="h-[2.2rem] w-[2.2rem] rotate-0 scale-100 transition-all" />
+              {/* Use text-white to color the Instagram icon white */}
+              <Instagram className="h-[2.2rem] w-[2.2rem] text-white transition-all" />
               <span className="sr-only">Visit Instagram</span>
             </Link>
           </Button>

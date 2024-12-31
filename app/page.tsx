@@ -24,7 +24,7 @@ export default function Home() {
             href="https://mailchi.mp/d4f8a952daeb/mailing-list-sign-up"
             aria-label="Sign up for Carey and Rolls' mailing list"
           >
-            Sign Up
+            <span className="text-white">Sign Up</span>
           </Link>
         </Button>
       </Craft.Container>
