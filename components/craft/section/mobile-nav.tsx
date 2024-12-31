@@ -9,7 +9,7 @@ import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
 
 // Utility Imports
-import { Menu, ArrowRightSquare } from "lucide-react";
+import { Menu, ArrowRightSquare, Instagram } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Component Imports
@@ -50,6 +50,16 @@ export function MobileNav() {
                 {key.charAt(0).toUpperCase() + key.slice(1)}
               </MobileLink>
             ))}
+            <Separator />
+            <Button variant={"ghost"} asChild size="icon">
+              <Link
+                className="flex items-center justify-center"
+                href="https://www.instagram.com/careyandrolls/"
+              >
+                <Instagram className="h-[1.5rem] w-[1.5rem] rotate-0 scale-100 transition-all" />
+                <span className="sr-only">Visit Instagram</span>
+              </Link>
+            </Button>
           </div>
         </ScrollArea>
       </SheetContent>

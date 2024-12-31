@@ -39,7 +39,7 @@ const PostCard = ({ post, tags = [] }: PostCardProps) => {
 
       <h3
         dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-        className="text-primary mb-2 text-xl"
+        className="mb-2 text-xl"
       ></h3>
 
       <div
