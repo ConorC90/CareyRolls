@@ -1,4 +1,3 @@
-import FAQ from "@/components/sections/faq";
 import * as Craft from "@/components/craft/layout";
 import type { Metadata } from "next";
 import careyRolls from "@/careyRolls.config";
@@ -40,7 +39,6 @@ export default async function AboutPage() {
             dangerouslySetInnerHTML={{ __html: page.content.rendered }}
           ></div>
         </Craft.Container>
-        <FAQ />
       </Craft.Section>
     </Craft.Main>
   );

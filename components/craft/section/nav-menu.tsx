@@ -36,7 +36,7 @@ export function NavMenu() {
         <NavigationMenuItem>
           <Link href="/contact" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Contact us
+              Contact
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
