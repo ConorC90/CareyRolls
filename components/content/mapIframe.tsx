@@ -2,7 +2,6 @@ import * as Craft from "@/components/craft/layout";
 
 const PageBody = ({ page, date }: PageProps) => {
   return (
-    <Craft.Section>
       <Craft.Container>
         <iframe
           src="https://careyrolls.travelmap.net"
@@ -12,7 +11,6 @@ const PageBody = ({ page, date }: PageProps) => {
           frameBorder="0"
         ></iframe>
       </Craft.Container>
-    </Craft.Section>
   );
 };
 

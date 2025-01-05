@@ -1,6 +1,4 @@
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "./theme/theme-provider";
-import { ParallaxProvider } from "react-scroll-parallax";
 import { Providers } from "@/app/providers";
 // LAYOUT
 // Layout Component
@@ -16,14 +14,7 @@ const Layout = ({ children, className }: LayoutProps) => {
       className={cn("scroll-smooth bg-offwhite focus:scroll-auto", className)}
     >
       <body className={cn("flex flex-col min-h-screen  flex-grow", className)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
           <Providers>{children}</Providers>
-        </ThemeProvider>
       </body>
     </html>
   );
