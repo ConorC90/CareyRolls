@@ -1,9 +1,12 @@
 import * as Craft from "@/components/craft/layout";
-import HomePage from "./home/page";
+import dynamic from "next/dynamic";
 import Test from "./test";
-import MapIframe from "../components/content/mapIframe";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
+const HomePage = dynamic(() => import("./home/page"));
+const MapIframe = dynamic(() => import("../components/content/mapIframe"));
+
 
 export default function Home() {
   return (

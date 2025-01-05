@@ -1,34 +1,45 @@
 "use client";
-import dynamic from "next/dynamic";
-import React from "react";
 
-const ParallaxBannerNoSSR = dynamic(
-  () => import("react-scroll-parallax").then((mod) => mod.ParallaxBanner),
-  {
-    ssr: false,
-  }
-);
+import { ParallaxBanner } from "react-scroll-parallax";
+import Image from "next/image";
 
-const bannerClass = "w-full h-screen"; // Fullscreen banner class
+const bannerClass = "w-full h-screen";
 
 export default function Test() {
   return (
-    <ParallaxBannerNoSSR
+    <ParallaxBanner
       layers={[
         {
-          image: "landscape.JPG",
-          speed: 20,
-          className: "bg-center bg-cover",
+          // Background layer with parallax effect
+          children: (
+            <div className="absolute top-0 left-0 w-full h-full">
+              <Image
+                src="/landscape.JPG"
+                alt="Background landscape"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+          ),
+          speed: 10, // Background moves slower than scroll
         },
         {
-          speed: -30,
-          className: "flex justify-center items-center",
+          // Foreground content with parallax effect
           children: (
             <div
-              className="bg-center bg-contain bg-no-repeat w-full h-full sm:w-3/4 sm:h-3/4 md:w-1/2 md:h-1/2"
-              style={{ backgroundImage: "url(/careyandrolls.png)" }}
+              className="absolute inset-0 flex justify-center items-center"
+              style={{
+                backgroundImage: "url(/careyandrolls.png)",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                width: "100%",
+                height: "100%",
+              }}
             />
           ),
+          speed: -30, // Foreground moves faster than scroll
         },
       ]}
       className={bannerClass}

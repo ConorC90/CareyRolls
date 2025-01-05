@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Providers } from "@/app/providers";
+
 // LAYOUT
 // Layout Component
 type LayoutProps = {
