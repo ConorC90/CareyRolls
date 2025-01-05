@@ -12,7 +12,7 @@ export default function Home() {
       <HomePage />
       <MapIframe />
 
-      <Craft.Container className="flex text-center flex-col justify-center py-0">
+      <Craft.Container className="flex text-center flex-col justify-center px-0 pb-8">
         <h2>Sign up to our mailing list!</h2>
         <p className="mb-6">
           By signing up to our mailing list, you will be able to keep up to date
