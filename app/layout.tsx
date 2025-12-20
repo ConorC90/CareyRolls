@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   keywords: careyRolls.keywords,
   authors: careyRolls.authors,
   metadataBase: new URL(careyRolls.site_domain),
+  verification: {
+    google: "KxgTgoIEvGCPmd173VaJeBmNSPufGObpu3jslW33XlI"
+    },
   alternates: {
     canonical: "/",
     languages: {
