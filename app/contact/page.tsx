@@ -37,18 +37,18 @@ export default async function ContactUS({
     const data = await res.json();
     return data?.[0];
   }
-  const contactPage: PageProps = await fetchContactPage();
+  const contactPage: WPPageProps = await fetchContactPage();
 
   return (
     <Craft.Main>
-        <Craft.Container>
-          <h1
-            dangerouslySetInnerHTML={{ __html: contactPage.title.rendered }}
-          ></h1>
-          <div
-            dangerouslySetInnerHTML={{ __html: contactPage.content.rendered }}
-          ></div>
-        </Craft.Container>
+      <Craft.Container>
+        <h1
+          dangerouslySetInnerHTML={{ __html: contactPage.title.rendered }}
+        ></h1>
+        <div
+          dangerouslySetInnerHTML={{ __html: contactPage.content.rendered }}
+        ></div>
+      </Craft.Container>
     </Craft.Main>
   );
 }

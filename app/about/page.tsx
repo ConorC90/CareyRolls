@@ -25,21 +25,17 @@ async function fetchAboutPage() {
 }
 
 export default async function AboutPage() {
-  const page: PageProps = await fetchAboutPage();
+  const page: WPPageProps = await fetchAboutPage();
   if (!page) {
     return notFound();
   }
 
   return (
     <Craft.Main>
- 
-        <Craft.Container>
-          <h1 dangerouslySetInnerHTML={{ __html: page.title.rendered }}></h1>
-          <div
-            dangerouslySetInnerHTML={{ __html: page.content.rendered }}
-          ></div>
-        </Craft.Container>
-  
+      <Craft.Container>
+        <h1 dangerouslySetInnerHTML={{ __html: page.title.rendered }}></h1>
+        <div dangerouslySetInnerHTML={{ __html: page.content.rendered }}></div>
+      </Craft.Container>
     </Craft.Main>
   );
 }

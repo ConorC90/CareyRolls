@@ -54,7 +54,7 @@ export default async function Posts({ searchParams }: { searchParams: any }) {
     const data = await res.json();
     return data?.[0];
   }
-  const recipesPage: PageProps = await fetchRecipesPage();
+  const recipesPage: WPPageProps = await fetchRecipesPage();
   if (!page) {
     return notFound();
   }

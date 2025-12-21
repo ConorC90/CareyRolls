@@ -26,7 +26,7 @@ async function fetchPage() {
 }
 
 export default async function HomePage() {
-  const page: PageProps = await fetchPage();
+  const page: WPPageProps = await fetchPage();
   if (!page) {
     return notFound();
   }

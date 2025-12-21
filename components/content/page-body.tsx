@@ -2,7 +2,7 @@ import BackButton from "@/components/global/elements/back-button";
 import Image from "next/image";
 import * as Craft from "@/components/craft/layout";
 
-const PageBody = ({ page, date }: PageProps) => {
+const PageBody = ({ page, date }: WPPageProps) => {
   return (
     <Craft.Section>
       <Craft.Container>

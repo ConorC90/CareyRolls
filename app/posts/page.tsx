@@ -59,7 +59,7 @@ export default async function Posts({ searchParams }: { searchParams: any }) {
 
   const lastPage = Math.ceil(totalPosts / careyRolls.posts_per_page);
   const tags = await fetchTags();
-  const blogPage: PageProps = await fetchBlogPage();
+  const blogPage: WPPageProps = await fetchBlogPage();
   if (!page) {
     return notFound();
   }

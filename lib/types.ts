@@ -121,7 +121,7 @@ type ConfigProps = {
       about?: string;
       contact?: string;
       recipes?: string;
-      gallery?: string
+      gallery?: string;
     };
     content: {
       authors?: string;
@@ -134,7 +134,7 @@ type ConfigProps = {
       privacy_policy_text?: string;
       terms_of_service?: string;
       terms_of_service_text?: string;
-    };  
+    };
   };
   nav_menu: {
     title: string;
@@ -195,7 +195,8 @@ type NavProps = {
   id?: string;
 };
 
-type PageProps =any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type WPPageProps = any;
 
 type faqProps = {
   question: string;
