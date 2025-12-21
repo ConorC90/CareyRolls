@@ -32,14 +32,14 @@ export default async function AboutPage() {
 
   return (
     <Craft.Main>
-      <Craft.Section>
+ 
         <Craft.Container>
           <h1 dangerouslySetInnerHTML={{ __html: page.title.rendered }}></h1>
           <div
             dangerouslySetInnerHTML={{ __html: page.content.rendered }}
           ></div>
         </Craft.Container>
-      </Craft.Section>
+  
     </Craft.Main>
   );
 }

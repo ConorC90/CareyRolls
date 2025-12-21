@@ -41,7 +41,6 @@ export default async function ContactUS({
 
   return (
     <Craft.Main>
-      <Craft.Section>
         <Craft.Container>
           <h1
             dangerouslySetInnerHTML={{ __html: contactPage.title.rendered }}
@@ -50,7 +49,6 @@ export default async function ContactUS({
             dangerouslySetInnerHTML={{ __html: contactPage.content.rendered }}
           ></div>
         </Craft.Container>
-      </Craft.Section>
     </Craft.Main>
   );
 }

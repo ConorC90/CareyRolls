@@ -65,32 +65,26 @@ export default async function Posts({ searchParams }: { searchParams: any }) {
   }
   return (
     <Craft.Main>
-      <Craft.Section>
-        <Craft.Container>
-          <h1
-            dangerouslySetInnerHTML={{ __html: blogPage.title.rendered }}
-          ></h1>
-          <div
-            dangerouslySetInnerHTML={{ __html: blogPage.content.rendered }}
-          ></div>
-        </Craft.Container>
-      </Craft.Section>
+      <Craft.Container>
+        <h1 dangerouslySetInnerHTML={{ __html: blogPage.title.rendered }}></h1>
+        <div
+          dangerouslySetInnerHTML={{ __html: blogPage.content.rendered }}
+        ></div>
+      </Craft.Container>
 
-      <Craft.Section>
-        <Craft.Container>
-          <ContentGrid id="posts">
-            {data.map((post: PostProps) => (
-              <PostCard
-                key={post.id}
-                post={post}
-                tags={post._embedded["wp:term"]?.[0] ?? []}
-              />
-            ))}
-          </ContentGrid>
-          <Separator className="my-6 md:my-12" />
-          <PaginationWrapper page={page} lastPage={lastPage} />
-        </Craft.Container>
-      </Craft.Section>
+      <Craft.Container>
+        <ContentGrid id="posts">
+          {data.map((post: PostProps) => (
+            <PostCard
+              key={post.id}
+              post={post}
+              tags={post._embedded["wp:term"]?.[0] ?? []}
+            />
+          ))}
+        </ContentGrid>
+        <Separator className="my-6 md:my-12" />
+        <PaginationWrapper page={page} lastPage={lastPage} />
+      </Craft.Container>
     </Craft.Main>
   );
 }
